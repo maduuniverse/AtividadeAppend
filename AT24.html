@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="entrar">Entrar</button>
+    <button id="salvar">Salvar</button>
+    <button id="sair">Sair</button>
+
+    <ul id="log"></ul>
+
+    <script>
+
+        const log = document.getElementById("log");
+
+        function registrar(texto) {
+
+            const li = document.createElement("li");
+
+            let data = new Date();
+
+            li.textContent =
+                texto + " - " +
+                data.toLocaleString();
+
+            log.appendChild(li);
+        }
+
+        entrar.addEventListener("click",
+            () => registrar("Usuário entrou"));
+
+        salvar.addEventListener("click",
+            () => registrar("Usuário salvou os dados"));
+
+        sair.addEventListener("click",
+            () => registrar("Usuário saiu"));
+
+    </script>
+</body>
+
+</html>
