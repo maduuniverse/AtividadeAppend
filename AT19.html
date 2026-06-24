@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="add">Adicionar Letra</button>
+    <button id="remove">Remover Letra</button>
+
+    <div id="area"></div>
+
+    <script>
+
+        let letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let indice = 0;
+
+        const area = document.getElementById("area");
+
+        document.getElementById("add")
+            .addEventListener("click", function () {
+
+                if (indice < letras.length) {
+
+                    const span = document.createElement("span");
+
+                    span.textContent =
+                        letras[indice] + " ";
+
+                    area.appendChild(span);
+
+                    indice++;
+                }
+
+            });
+
+        document.getElementById("remove")
+            .addEventListener("click", function () {
+
+                if (area.children.length > 0) {
+
+                    area.removeChild(area.lastElementChild);
+
+                    indice--;
+                }
+
+            });
+
+    </script>
+</body>
+
+</html>
