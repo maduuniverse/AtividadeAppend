@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="frase">Nova Frase</button>
+
+    <div id="area"></div>
+
+    <script>
+
+        let frases = [
+            "Você consegue!",
+            "Nunca desista!",
+            "Continue estudando!",
+            "Seu esforço vale a pena!"
+        ];
+
+        let indice = 0;
+
+        document.getElementById("frase")
+            .addEventListener("click", function () {
+
+                const p = document.createElement("p");
+                p.textContent = frases[indice];
+
+                document.getElementById("area").appendChild(p);
+
+                indice++;
+
+                if (indice >= frases.length) {
+                    indice = 0;
+                }
+
+            });
+
+    </script>
+</body>
+
+</html>
