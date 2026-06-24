@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="texto">
+
+    <button id="publicar">Publicar</button>
+    <button id="remover">Remover Última</button>
+
+    <div id="mural"></div>
+
+    <script>
+
+        const mural = document.getElementById("mural");
+
+        document.getElementById("publicar")
+            .addEventListener("click", function () {
+
+                const p = document.createElement("p");
+
+                p.textContent =
+                    document.getElementById("texto").value;
+
+                mural.appendChild(p);
+
+            });
+
+        document.getElementById("remover")
+            .addEventListener("click", function () {
+
+                if (mural.children.length > 0) {
+                    mural.removeChild(mural.lastElementChild);
+                }
+
+            });
+
+    </script>
+</body>
+
+</html>
