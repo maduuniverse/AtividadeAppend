@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let noticias = [
+            "Economia cresce.",
+            "Novo filme anunciado.",
+            "Equipe vence campeonato.",
+            "Nova tecnologia lançada.",
+            "Mercado abre em alta."
+        ];
+
+        let indice = 0;
+
+        document.getElementById("nova")
+            .addEventListener("click", function () {
+
+                const p = document.createElement("p");
+
+                p.textContent = noticias[indice];
+
+                painel.appendChild(p);
+
+                indice++;
+
+                if (indice >= noticias.length) {
+                    indice = 0;
+                }
+
+            });
+
+    </script>
+</body>
+
+</html>
