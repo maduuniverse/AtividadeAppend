@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="gerar">Gerar Senha</button>
+    <button id="atender">Atender Cliente</button>
+
+    <ul id="fila"></ul>
+
+    <script>
+
+        let senha = 1;
+        const fila = document.getElementById("fila");
+
+        document.getElementById("gerar")
+            .addEventListener("click", function () {
+
+                const li = document.createElement("li");
+
+                li.textContent =
+                    "Senha " + senha;
+
+                fila.appendChild(li);
+
+                senha++;
+
+            });
+
+        document.getElementById("atender")
+            .addEventListener("click", function () {
+
+                if (fila.children.length > 0) {
+                    fila.removeChild(fila.firstElementChild);
+                }
+
+            });
+
+    </script>
+</body>
+
+</html>
