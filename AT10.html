@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="emoji">😊</button>
+
+    <div id="area"></div>
+
+    <script>
+
+        document.getElementById("emoji")
+            .addEventListener("click", function () {
+
+                const span = document.createElement("span");
+
+                span.textContent = "😊 ";
+
+                document.getElementById("area")
+                    .appendChild(span);
+
+            });
+
+    </script>
+
+</body>
+
+</html>
