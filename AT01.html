@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnAdicionar">Adicionar Mensagem</button>
+
+<div id="mensagens"></div>
+
+<script>
+    const botao = document.getElementById("btnAdicionar");
+    const area = document.getElementById("mensagens");
+
+    botao.addEventListener("click", function() {
+        const p = document.createElement("p");
+        p.textContent = "Bem-vindo ao sistema!";
+
+        area.appendChild(p);
+    });
+</script>
+</body>
+</html>
