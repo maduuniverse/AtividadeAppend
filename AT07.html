@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="aluno">
+
+    <button id="cadastrar">Cadastrar</button>
+    <button id="excluir">Excluir Último Aluno</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+
+        const lista = document.getElementById("lista");
+
+        document.getElementById("cadastrar")
+            .addEventListener("click", function () {
+
+                const li = document.createElement("li");
+                li.textContent = document.getElementById("aluno").value;
+
+                lista.appendChild(li);
+
+            });
+
+        document.getElementById("excluir")
+            .addEventListener("click", function () {
+
+                if (lista.children.length > 0) {
+                    lista.removeChild(lista.lastElementChild);
+                }
+
+            });
+
+    </script>
+</body>
+
+</html>
