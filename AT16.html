@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="criar">Criar Quadrado</button>
+
+    <div id="area"></div>
+
+    <script>
+
+        let cores = ["red", "blue", "green", "yellow"];
+        let indice = 0;
+
+        document.getElementById("criar")
+            .addEventListener("click", function () {
+
+                const div = document.createElement("div");
+
+                div.style.width = "50px";
+                div.style.height = "50px";
+                div.style.backgroundColor = cores[indice];
+                div.style.display = "inline-block";
+                div.style.margin = "5px";
+
+                area.appendChild(div);
+
+                indice++;
+
+                if (indice >= cores.length) {
+                    indice = 0;
+                }
+
+            });
+
+    </script>
+</body>
+
+</html>
