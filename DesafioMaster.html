@@ -1,0 +1,45 @@
+<input type="text" id="mensagem">
+
+<button id="enviar">Enviar</button>
+<button id="apagar">Apagar Última Mensagem</button>
+
+<div id="chat"></div>
+
+<script>
+
+const chat = document.getElementById("chat");
+
+document.getElementById("enviar")
+.addEventListener("click", function(){
+
+    const texto =
+    document.getElementById("mensagem").value;
+
+    if(texto.trim() !== ""){
+
+        const p = document.createElement("p");
+
+        p.textContent = texto;
+
+        chat.appendChild(p);
+
+        document.getElementById("mensagem").value = "";
+
+    }
+
+});
+
+document.getElementById("apagar")
+.addEventListener("click", function(){
+
+    if(chat.children.length > 0){
+
+        chat.removeChild(
+            chat.lastElementChild
+        );
+
+    }
+
+});
+
+</script>
