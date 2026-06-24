@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="produto">Adicionar Produto</button>
+
+    <div id="catalogo"></div>
+
+    <script>
+
+        let contador = 1;
+
+        document.getElementById("produto")
+            .addEventListener("click", function () {
+
+                const card = document.createElement("div");
+
+                card.style.border = "1px solid black";
+                card.style.padding = "10px";
+                card.style.margin = "10px";
+
+                const nome = document.createElement("h3");
+                nome.textContent = "Produto " + contador;
+
+                const preco = document.createElement("p");
+                preco.textContent = "R$ 100,00";
+
+                card.appendChild(nome);
+                card.appendChild(preco);
+
+                document.getElementById("catalogo")
+                    .appendChild(card);
+
+                contador++;
+
+            });
+
+    </script>
+</body>
+
+</html>
