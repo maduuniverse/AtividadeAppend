@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="remover">Remover Última Tarefa</button>
+
+    <script>
+
+        const lista = document.getElementById("lista");
+
+        document.getElementById("remover")
+            .addEventListener("click", function () {
+
+                if (lista.children.length > 0) {
+                    lista.removeChild(lista.lastElementChild);
+                }
+
+            });
+
+    </script>
+</body>
+
+</html>
