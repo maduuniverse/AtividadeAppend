@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="criar">Criar Quadrado</button>
+    <button id="remover">Remover Quadrado</button>
+
+    <div id="area"></div>
+
+    <script>
+
+        const area = document.getElementById("area");
+
+        document.getElementById("criar")
+            .addEventListener("click", function () {
+
+                const div = document.createElement("div");
+
+                div.style.width = "50px";
+                div.style.height = "50px";
+                div.style.backgroundColor = "green";
+                div.style.margin = "5px";
+
+                area.appendChild(div);
+
+            });
+
+        document.getElementById("remover")
+            .addEventListener("click", function () {
+
+                if (area.children.length > 0) {
+                    area.removeChild(area.lastElementChild);
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>
