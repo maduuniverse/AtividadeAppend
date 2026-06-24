@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="produto">
+    <button id="adicionar">Adicionar Produto</button>
+    <button id="remover">Remover Último Produto</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+
+        const lista = document.getElementById("lista");
+
+        document.getElementById("adicionar")
+            .addEventListener("click", function () {
+
+                const li = document.createElement("li");
+                li.textContent = document.getElementById("produto").value;
+
+                lista.appendChild(li);
+
+            });
+
+        document.getElementById("remover")
+            .addEventListener("click", function () {
+
+                if (lista.children.length > 0) {
+                    lista.removeChild(lista.lastElementChild);
+                }
+
+            });
+
+    </script>
+</body>
+
+</html>
