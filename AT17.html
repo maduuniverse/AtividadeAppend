@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="clicar">Clique Aqui</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+
+        document.getElementById("clicar")
+            .addEventListener("click", function () {
+
+                const li = document.createElement("li");
+
+                li.textContent =
+                    "Você clicou no botão!";
+
+                document.getElementById("lista")
+                    .appendChild(li);
+
+            });
+
+    </script>
+</body>
+
+</html>
