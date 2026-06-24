@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="criar">Criar Bolinha</button>
+    <button id="remover">Remover Bolinha</button>
+
+    <div id="area"></div>
+
+    <script>
+
+        const area = document.getElementById("area");
+
+        function corAleatoria() {
+
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+
+            return `rgb(${r},${g},${b})`;
+        }
+
+        criar.addEventListener("click", function () {
+
+            const bolinha = document.createElement("div");
+
+            bolinha.style.width = "40px";
+            bolinha.style.height = "40px";
+            bolinha.style.borderRadius = "50%";
+            bolinha.style.display = "inline-block";
+            bolinha.style.margin = "5px";
+            bolinha.style.backgroundColor =
+                corAleatoria();
+
+            area.appendChild(bolinha);
+
+        });
+
+        remover.addEventListener("click", function () {
+
+            if (area.children.length > 0) {
+                area.removeChild(area.lastElementChild);
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
