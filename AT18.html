@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="comentario">
+    <button id="publicar">Publicar Comentário</button>
+
+    <div id="comentarios"></div>
+
+    <script>
+
+        document.getElementById("publicar")
+            .addEventListener("click", function () {
+
+                const p = document.createElement("p");
+
+                p.textContent =
+                    document.getElementById("comentario").value;
+
+                document.getElementById("comentarios")
+                    .appendChild(p);
+
+            });
+
+    </script>
+</body>
+
+</html>
