@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="criar">Criar Quadrado</button>
+
+    <div id="area"></div>
+
+    <script>
+
+        document.getElementById("criar")
+            .addEventListener("click", function () {
+
+                const quadrado = document.createElement("div");
+
+                quadrado.style.width = "50px";
+                quadrado.style.height = "50px";
+                quadrado.style.backgroundColor = "blue";
+                quadrado.style.margin = "5px";
+
+                document.getElementById("area")
+                    .appendChild(quadrado);
+
+            });
+
+    </script>
+
+</body>
+
+</html>
